@@ -82,7 +82,6 @@ if (isset($_POST['login_user'])) {
 <form class="form " action="" method="post">
 	  <input type="text" class="form-control mb-2 mr-sm-2" name="username" placeholder="USERNAME" required> <br/>
 	  <input type="password" class="form-control mb-2 mr-sm-2" name="pwd" placeholder="PASSWORD" required> <br/>
-	  <input type="password" class="form-control mb-2 mr-sm-2" name="pwd" placeholder="PASSWORD" required> <br/>
 	  <button type="submit" class="btn btn-outline-light mb-2" name="login_user">Login</button>
 </form>
 
