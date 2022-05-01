@@ -5,3 +5,29 @@ h3{
 .mt-3{
 	color:white;
 }
+.principal{
+	background-color: red;
+	width: 100%;
+}
+.table_trainer{
+	background-color: white;
+}
+.container_trainer0{
+	position:absolute;
+	left:400px;
+}
+.menu{
+
+	width: auto;
+}
+
+.container_add_trainer
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:400px;
+	right: 40%;
+	
+
+}

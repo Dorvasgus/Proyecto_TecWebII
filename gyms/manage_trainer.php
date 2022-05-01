@@ -1,23 +1,27 @@
 
-<div class="container">
+<div class="container_trainer0">
 	<form class="form-group mt-3" method="post" action="home.php?info=trainer_search">
-		<h3 class="lead">SEARCH TRAINER</h3>
-		<input type="text" name="name" class="form-control" placeholder="ENTER TRAINER NAME OR TRAINER ID">
+		<h3>BUSCAR ENTRENADOR</h3>
+		<input type="text" name="name" class="form-control" placeholder="INGRESE EL NOMBRE O CI DEL ENTRENADOR">
 	</form>
 
-	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
-				<th>TRAINER_ID</th>
-				<th>NAME</th>
-				<th>TIME</th>
-				<th>MOBILE NO</th>
+	<div class="container_trainer">
+		<table class="table">
+			<thead class="table-dark">
+				<tr>
+					<th>CI</th>
+					<th>NOMBRE</th>
+					<th>APELLIDO PATERNO</th>
+					<th>APELLIDO MATERNO</th>
+					<th>DIRECCION</th>
+					<th>TELEFONO</th>
+					<th>DISCIPLINA</th>
 
-			</tr>
+				</tr>
+			</thead>
+			<tbody class="table_trainer">
 			<?php
-           require('db.php');
-
-
+require('db.php');
 $all="SELECT * FROM trainer";
 $all_query=mysqli_query($conn,$all);
 if (mysqli_num_rows($all_query) > 0) {
@@ -32,11 +36,8 @@ if (mysqli_num_rows($all_query) > 0) {
 } else {
     echo "0 results";
 }
-
-
-
 ?>
-			
+			</tbody>	
 		</table>
 	</div>
 </div>

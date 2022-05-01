@@ -22,64 +22,42 @@ include("auth.php");
 
 
 
+
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<div class="container-fluid">
-  <a class="navbar-brand" href="home.php">GYM MANAGEMENT SYSTEM</a>
-  <a href="logout.php" class=" nav nav-link">log out</a>
+  <a class="navbar-brand" href="home.php">GYM VENUS</a>
+  <a href="logout.php" class=" nav nav-link">CERRAR SESION</a>
 </div>
 </nav>
 
-
+<aside class="menu">
 
 <div class="row mt-3">
   <div class="col-2">
     <div id="accordion">
-    <div class="list-group">
-      <div class="list-group-item bg-dark">
-        <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapseTwo">
-        <i class="fas fa-user-alt"></i>GYM</a>
-      </div>
-      <div id="collapseTwo" class="collapse" data-parent="#accordion">
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_gym" class="text-light">ADD GYM</a>
-          </div>
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_gym" class="text-light">VIEW GYMS</a></div>
-        </div>
-
-      <div class="list-group-item bg-dark">
-        <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapseThree">
-          <i class="fas fa-user-graduate"></i>PAYMENT DEPARTMENT
-        </a>
-      </div>
-      <div id="collapseThree" class="collapse" data-parent="#accordion">
-        <div class="list-group-item" style="background-color: #303030;">
-          <a href="home.php?info=add_payment" class="text-light">ADD PAYMENT AREA</a>
-        </div>
-        <div class="list-group-item" style="background-color: #303030;">
-          <a href="home.php?info=manage_payment" class="text-light">VIEW PAYMENT AREAS</a>
-        </div>
-        
+    <div class="list-group">       
       </div>
          <div class="list-group-item bg-dark">
         <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapsefive">
-        <i class="fas fa-book"></i>MEMBERS</a>
+        <i class="fas fa-book"></i>MIEMBROS</a>
       </div>
       <div id="collapsefive" class="collapse" data-parent="#accordion">
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_member" class="text-light">ADD MEMBER</a></div>
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_member" class="text-light">VIEW MEMBERS</a></div>
+          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_member" class="text-light">AGREGAR MIEMBROS</a></div>
+          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_member" class="text-light">VER MIEMBROS</a></div>
         </div>
 
          <div class="list-group-item bg-dark">
         <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapsesix">
-        <i class="fas fa-users"></i>TRAINERS</a>
+        <i class="fas fa-users"></i>ENTRENADORES</a>
       </div>
       <div id="collapsesix" class="collapse" data-parent="#accordion">
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_trainer" class="text-light">ADD TRAINER</a></div>
-          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_trainer" class="text-light">VIEW TRAINERS</a></div>
+          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_trainer" class="text-light">AGREGAR ENTRENADOR</a></div>
+          <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_trainer" class="text-light">VER ENTRENADORES</a></div>
         </div>
     </div>
 </div>
  
-  </div>
+</div>
 
   <div class="col-10">
    <?php
@@ -139,6 +117,7 @@ if ($info!=="") {
   </div>
 </div>
 
+</aside>
 
 
 </body>

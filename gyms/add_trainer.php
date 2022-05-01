@@ -1,3 +1,5 @@
+
+  
 <?php
 
 require('db.php');
@@ -40,28 +42,39 @@ if (isset($_REQUEST['trainer'])) {
 
 
 ?>
-
-
-
-
-
-<div class="container">
+<section class="container">
+  <div class="container_add_trainer"
 	<form class="mt-3 form-group" method="post" action="">
-		<h3>ADD TRAINER</h3>
+		<h3>NUEVO ENTRENADOR</h3>
 		 <?php include('errors.php'); 
     echo @$msg;
-
+    
     ?>
-		<label class="mt-3">TRAINER ID</label>
+    </br>
+    </br>
+		<label class="mt-3">CI</label>
 		<input type="text" name="id" class="form-control">
-		<label class="mt-3">TRAINER NAME</label>
+    </br>
+		<label class="mt-3">NOMBRE</label>
 		<input type="text" name="name" class="form-control">
-		<label class="mt-3">TIME</label>
+    </br>
+		<label class="mt-3">APELLIDO PATERNO</label>
 		<input type="text" name="time" class="form-control">
-		<label class="mt-3">MOBILE NO</label>
+    </br>
+		<label class="mt-3">APELLIDO MATERNO</label>
 		<input type="text" name="mobileno" class="form-control">
-		<label class="mt-3">PAYMENT AREA ID</label>
+    </br>
+		<label class="mt-3">DIRECCION</label>
 		<input type="text" name="pay_id" class="form-control">
-		<button class="btn btn-dark mt-3" type="submit" name="trainer">ADD</button>
+    </br>
+    <label class="mt-3">TELEFONO</label>
+		<input type="text" name="pay_id" class="form-control">
+    </br>
+    <label class="mt-3">DISCIPLINA</label>
+		<input type="text" name="pay_id" class="form-control">
+    </br>
+		<button class="btn btn-dark mt-3" type="submit" name="trainer">AGREGAR</button>
 	</form>
 </div>
+</section>
+
