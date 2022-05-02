@@ -71,7 +71,11 @@ if (isset($_REQUEST['trainer'])) {
 		<input type="text" name="pay_id" class="form-control">
     </br>
     <label class="mt-3">DISCIPLINA</label>
-		<input type="text" name="pay_id" class="form-control">
+		<select name="cbdisciplina" id="disciplina">
+      <option value="Zumba">Zumba</option>
+      <option value="Maquinas">Maquinas</option>
+      <option value="Aerobic">Aerobics</option>
+    </select>
     </br>
 		<button class="btn btn-dark mt-3" type="submit" name="trainer">AGREGAR</button>
 	</form>
