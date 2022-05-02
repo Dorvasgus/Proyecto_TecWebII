@@ -9,10 +9,10 @@ h3{
 	background-color: red;
 	width: 100%;
 }
-.table_trainer{
+.table{
 	background-color: white;
 }
-.container_trainer0{
+.container_show{
 	position:absolute;
 	left:400px;
 }
@@ -21,7 +21,7 @@ h3{
 	width: auto;
 }
 
-.container_add_trainer
+.container_add
 {
 	position: absolute;
 	top: 0;

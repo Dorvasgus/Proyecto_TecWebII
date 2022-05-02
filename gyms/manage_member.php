@@ -1,22 +1,27 @@
 
 
-<div class="container">
+<div class="container_show">
 	<form class="form-group mt-3" method="post" action="home.php?info=member_search">
-		<h3 class="lead">SEARCH MEMBER</h3>
-		<input type="text" name="name" class="form-control" placeholder="ENTER MEMBER NAME">
+		<h3 class="lead">BUSCAR MIEMBRO</h3>
+		<input type="text" name="name" class="form-control" placeholder="INGRESE NOMBRE DEL CLIENTE">
 	</form>
 
 	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
-				<th>MEMBER_ID</th>
-				<th>MEMBER NAME</th>
-				<th>DOB</th>
-				<th>AGE</th>
-				<th>PACKAGE</th>
-				<th>MOBILE NO</th>
+	<table class="table">
+	<thead class="table-dark">
+				<tr>
+					<th>CI</th>
+					<th>NOMBRE</th>
+					<th>APELLIDO PATERNO</th>
+					<th>APELLIDO MATERNO</th>
+					<th>DIRECCION</th>
+					<th>TELEFONO</th>
+					<th>DISCIPLINA</th>
 
-			</tr>
+				</tr>
+			</thead>
+			<tbody class="table">
+		
 			<?php
            require('db.php');
 
@@ -41,7 +46,7 @@ if (mysqli_num_rows($all_query) > 0) {
 
 
 ?>
-			
+			</tbody>
 		</table>
 	</div>
 </div>

@@ -75,18 +75,18 @@ if (isset($_POST['login_user'])) {
 <body>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.php"><h3>GYM MANAGEMENT SYSTEM</h3></a>
+  <a class="navbar-brand" href="index.php"><h3>VENUS GYM</h3></a>
  
 
 </div>
 </nav>
 <hr>
- <h2 style="color:white; text-align:center;"> To be used by admin only.</h2>
+ <h2 style="color:white; text-align:center;"> INICIAR SESION</h2>
  <hr>
 
 <form class="form " action="" method="post">
-	  <input type="text" class="form-control mb-2 mr-sm-2" name="username" placeholder="USERNAME" required> <br/>
-	  <input type="password" class="form-control mb-2 mr-sm-2" name="pwd" placeholder="PASSWORD" required> <br/>
+	  <input type="text" class="form-control mb-2 mr-sm-2" name="username" placeholder="USUARIO" required> <br/>
+	  <input type="password" class="form-control mb-2 mr-sm-2" name="pwd" placeholder="CONTRASEÑA" required> <br/>
 	  <button type="submit" class="btn btn-outline-light mb-2" name="login_user">Login</button>
 </form>
 

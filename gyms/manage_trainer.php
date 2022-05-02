@@ -1,11 +1,11 @@
 
-<div class="container_trainer0">
+<div class="container_show">
 	<form class="form-group mt-3" method="post" action="home.php?info=trainer_search">
 		<h3>BUSCAR ENTRENADOR</h3>
 		<input type="text" name="name" class="form-control" placeholder="INGRESE EL NOMBRE O CI DEL ENTRENADOR">
 	</form>
 
-	<div class="container_trainer">
+	<div class="container">
 		<table class="table">
 			<thead class="table-dark">
 				<tr>
@@ -19,7 +19,7 @@
 
 				</tr>
 			</thead>
-			<tbody class="table_trainer">
+			<tbody class="table">
 			<?php
 require('db.php');
 $all="SELECT * FROM trainer";

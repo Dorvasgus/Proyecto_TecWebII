@@ -50,28 +50,28 @@ if (isset($_REQUEST['member'])) {
 
 
 <div class="container">
+  <div class="container_add">
 	<form class="form-group mt-3" method="post" action="">
-		<div><h3>ADD MEMBER</h3></div>
+		<div><h3>NUEVO MIEMBRO</h3></div>
 		 <?php include('errors.php'); 
     echo @$msg;
 
     ?>
-		<label class="mt-3">MEMBER ID</label>
+		<label class="mt-3">CI</label>
 		<input type="text" name="id" class="form-control">
-		<label class="mt-3">MEMBER NAME</label>
+		<label class="mt-3">NOMBRE</label>
 		<input type="text" name="name" class="form-control">
-		<label class="mt-3">AGE</label>
+		<label class="mt-3">APELLIDO PATERNO</label>
 		<input type="text" name="age" class="form-control">
-		<label class="mt-3">DOB</label>
+		<label class="mt-3">APELLIDO MATERNO</label>
 		<input type="text" name="dob" class="form-control">
-		<label class="mt-3">PACKAGE</label>
-		<input type="text" name="package" class="form-control">
-		<label class="mt-3">MOBILE NO</label>
+		<label class="mt-3">TELEFONO</label>
 		<input type="text" name="mobileno" class="form-control">
-		<label class="mt-3">PAYMENT AREA ID</label>
+		<label class="mt-3">PAQUETE</label>
 		<input type="text" name="pay_id" class="form-control">
-		<label class="mt-3">TRAINER ID</label>
+		<label class="mt-3">ENTRENADOR</label>
 		<input type="text" name="trainer_id" class="form-control">
-		<button class="btn btn-dark mt-3" type="submit" name="member">ADD</button>
+		<button class="btn btn-dark mt-3" type="submit" name="member">AGREGAR</button>
+</div>
 	</form>
 </div>

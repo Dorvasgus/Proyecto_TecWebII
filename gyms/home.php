@@ -25,7 +25,7 @@ include("auth.php");
 
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<div class="container-fluid">
-  <a class="navbar-brand" href="home.php">GYM VENUS</a>
+  <a class="navbar-brand" href="home.php">VENUS GYM</a>
   <a href="logout.php" class=" nav nav-link">CERRAR SESION</a>
 </div>
 </nav>
