@@ -11,21 +11,27 @@
 	<div class="container">
 		<table class="table table-bordered table-hover">
 			<tr>
-				<th>PAYMENT_ID</th>
-				<th>AMOUNT</th>
+				<th>ID</th>
+				<th>Nombre Producto</th>
+				<th>Tipo</th>
+				<th>Stock</th>
+				<th>Fecha Vencimiento</th>
 
 			</tr>
 			<?php
            require('db.php');
 
 
-$all="SELECT * FROM payment";
+$all="SELECT * FROM producto";
 $all_query=mysqli_query($conn,$all);
 if (mysqli_num_rows($all_query) > 0) {
     while($row = mysqli_fetch_assoc($all_query)) {
        echo "<tr>";
-			echo "<td>".$row['pay_id']."</td>";
-		echo "<td>".$row['amount']."</td>";
+		echo "<td>".$row['id']."</td>";
+		echo "<td>".$row['nombreProd']."</td>";
+		echo "<td>".$row['tipo']."</td>";
+		echo "<td>".$row['stock']."</td>";
+		echo "<td>".$row['fechaVencimiento']."</td>";
 		echo "</tr><br>";
     }
 } else {
