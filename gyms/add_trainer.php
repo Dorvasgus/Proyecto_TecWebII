@@ -45,8 +45,8 @@ if (isset($_REQUEST['btnentrenador'])) {
 
 
 ?>
-
-  <div class="container_add">
+<section class="container_add">
+  <!-- <div class="container_add" -->
 	<form class="mt-3 form-group" method="post" action="">
 		<h3>NUEVO ENTRENADOR</h3>
 		 <?php include('errors.php'); 
@@ -76,5 +76,6 @@ if (isset($_REQUEST['btnentrenador'])) {
     </br>
 		<button class="btn btn-dark mt-3" type="submit" name="btnentrenador">AGREGAR</button>
 	</form>
-</div>
+<!-- </div> -->
+</section>
 

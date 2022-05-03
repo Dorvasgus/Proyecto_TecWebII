@@ -29,7 +29,7 @@ if (isset($_REQUEST['btnaddmiembro'])) {
   if (count($errors) == 0) {
   
 
-    $query = "INSERT INTO miembro (CI,NOMBRE,APP,APM,,TELEFONO,PAQUETE,ENTRENADOR) 
+    $query = "INSERT INTO miembro (CI,NOMBRE,APP,APM,TELEFONO,PAQUETE,ENTRENADOR) 
           VALUES('$ci','$nomb','$app','$apm','$telef','$paq','$entr')";
     $sql=mysqli_query($conn, $query);
     if ($sql) {
@@ -49,7 +49,8 @@ if (isset($_REQUEST['btnaddmiembro'])) {
 
 
 
-  <div class="container_add">
+<div class="container_add">
+  <!-- <div class="container_add"> -->
 	<form class="form-group mt-3" method="post" action="">
 		<div><h3>NUEVO MIEMBRO</h3></div>
 		 <?php include('errors.php'); 
@@ -71,5 +72,6 @@ if (isset($_REQUEST['btnaddmiembro'])) {
 		<label class="mt-3">ENTRENADOR</label>
 		<input type="text" name="txtentr" class="form-control">
 		<button class="btn btn-dark mt-3" type="submit" name="btnaddmiembro">AGREGAR</button>
+  <!-- </div> -->
 	</form>
 </div>
