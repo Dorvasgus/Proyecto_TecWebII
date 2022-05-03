@@ -50,7 +50,7 @@ if (isset($_REQUEST['member'])) {
 
 
 <div class="container">
-  <div class="container_add">
+  <!-- <div class="container_add"> -->
 	<form class="form-group mt-3" method="post" action="">
 		<div><h3>NUEVO MIEMBRO</h3></div>
 		 <?php include('errors.php'); 
@@ -72,6 +72,6 @@ if (isset($_REQUEST['member'])) {
 		<label class="mt-3">ENTRENADOR</label>
 		<input type="text" name="trainer_id" class="form-control">
 		<button class="btn btn-dark mt-3" type="submit" name="member">AGREGAR</button>
-</div>
+  <!-- </div> -->
 	</form>
 </div>
