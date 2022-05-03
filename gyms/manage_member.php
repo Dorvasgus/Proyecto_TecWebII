@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="container_show">
 	<form class="form-group mt-3" method="post" action="home.php?info=member_search">
 		<h3 class="lead">Buscar Cliente</h3>
 		<input type="text" name="name" class="form-control" placeholder="INGRESE NOMBRE DEL CLIENTE">
@@ -14,7 +14,6 @@
 					<th>NOMBRE</th>
 					<th>APELLIDO PATERNO</th>
 					<th>APELLIDO MATERNO</th>
-					<th>DIRECCION</th>
 					<th>TELEFONO</th>
 					<th>PAQUETE</th>
 					<th>ENTRENADOR</th>
@@ -30,14 +29,14 @@
 				if (mysqli_num_rows($all_query) > 0) {
 					while($row = mysqli_fetch_assoc($all_query)) {
 						echo "<tr>";
-						echo "<td>".$row['cod']."</td>";
-						echo "<td>".$row['ci']."</td>";
-						echo "<td>".$row['nombre']."</td>";
-						echo "<td>".$row['app']."</td>";
-						echo "<td>".$row['apm']."</td>";
-						echo "<td>".$row['telefono']."</td>";
-						echo "<td>".$row['paquete']."</td>";
-						echo "<td>".$row['entrenador']."</td>";
+						echo "<td>".$row['CI']."</td>";
+						echo "<td>".$row['NOMBRE']."</td>";
+						echo "<td>".$row['APP']."</td>";
+						echo "<td>".$row['APM']."</td>";
+						echo "<td>".$row['TELEFONO']."</td>";
+						echo "<td>".$row['PAQUETE']."</td>";
+						echo "<td>".$row['ENTRENADOR']."</td>";
+
 						echo "</tr><br>";
 					}
 				} else {

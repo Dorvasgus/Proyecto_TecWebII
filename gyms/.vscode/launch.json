@@ -5,11 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch localhost",
+            "url": "http://localhost:80/Proyecto_TecWebII/gyms",
+            "webRoot": "${workspaceFolder}"
+        },
+      
+
+
+/*{
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:80/Proyecto_TecWebII/gyms",
             "webRoot": "${workspaceFolder}"
-        }
+        }*/
     ]
 }

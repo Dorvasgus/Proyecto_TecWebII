@@ -5,12 +5,16 @@ require('db.php');
 
 
 
-if (isset($_REQUEST['trainer'])) {
+if (isset($_REQUEST['entrenador'])) {
 
-  $trainer_id = mysqli_real_escape_string($conn, $_REQUEST['id']);
-  $name = mysqli_real_escape_string($conn, $_REQUEST['name']);
-  $time = mysqli_real_escape_string($conn, $_REQUEST['time']);
-  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['mobileno']);
+  $ci = mysqli_real_escape_string($conn, $_REQUEST['CI']);
+  $name = mysqli_real_escape_string($conn, $_REQUEST['NOMBRE']);
+  $time = mysqli_real_escape_string($conn, $_REQUEST['APP']);
+  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['APM']);
+  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['DIRECCION']);
+  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['TELEFONO']);
+  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['DISCIPLINA']);
+
 
 
   $update_query="update trainer set trainer_id='$trainer_id',name='$name',time='$time',mobileno='$mobileno' where trainer_id='".$_GET['id']."'";

@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container_show">
 	<form class="form-group mt-3" method="post" action="home.php?info=trainer_search">
 		<h3>BUSCAR ENTRENADOR</h3>
 		<input type="text" name="name" class="form-control" placeholder="INGRESE EL NOMBRE O CI DEL ENTRENADOR">
@@ -27,14 +27,13 @@
 					if (mysqli_num_rows($all_query) > 0) {
 						while($row = mysqli_fetch_assoc($all_query)) {
 							echo "<tr>";
-							echo "<td>".$row['cod']."</td>";
-							echo "<td>".$row['ci']."</td>";
-							echo "<td>".$row['nombre']."</td>";
-							echo "<td>".$row['app']."</td>";
-							echo "<td>".$row['apm']."</td>";
-							echo "<td>".$row['dir']."</td>";
-							echo "<td>".$row['telefono']."</td>";
-							echo "<td>".$row['codDisciplina']."</td>";
+							echo "<td>".$row['CI']."</td>";
+							echo "<td>".$row['NOMBRE']."</td>";
+							echo "<td>".$row['APP']."</td>";
+							echo "<td>".$row['APM']."</td>";
+							echo "<td>".$row['DIRECCION']."</td>";
+							echo "<td>".$row['TELEFONO']."</td>";
+							echo "<td>".$row['DISCIPLINA']."</td>";
 							echo "</tr><br>";
 						}
 					} else {
