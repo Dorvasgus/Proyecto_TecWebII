@@ -22,15 +22,18 @@
 			<tbody class="table">
 			<?php
 require('db.php');
-$all="SELECT * FROM trainer";
+$all="SELECT * FROM entrenador";
 $all_query=mysqli_query($conn,$all);
 if (mysqli_num_rows($all_query) > 0) {
     while($row = mysqli_fetch_assoc($all_query)) {
        echo "<tr>";
-			echo "<td>".$row['trainer_id']."</td>";
-		echo "<td>".$row['name']."</td>";
-		echo "<td>".$row['time']."</td>";
-		echo "<td>".$row['mobileno']."</td>";
+		echo "<td>".$row['CI']."</td>";
+		echo "<td>".$row['NOMBRE']."</td>";
+		echo "<td>".$row['APP']."</td>";
+		echo "<td>".$row['APM']."</td>";
+		echo "<td>".$row['DIRECCION']."</td>";
+		echo "<td>".$row['TELEFONO']."</td>";
+		echo "<td>".$row['DISCIPLINA']."</td>";
 		echo "</tr><br>";
     }
 } else {

@@ -3,25 +3,25 @@
 require('db.php');
 
 $errors = array(); 
-if (isset($_REQUEST['member'])) {
+if (isset($_REQUEST['btnaddmiembro'])) {
 
-  $mem_id = mysqli_real_escape_string($conn, $_REQUEST['id']);
-  $name = mysqli_real_escape_string($conn, $_REQUEST['name']);
-  $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
-  $dob = mysqli_real_escape_string($conn, $_REQUEST['dob']);
-   $package = mysqli_real_escape_string($conn, $_REQUEST['package']);
-  $mobileno = mysqli_real_escape_string($conn, $_REQUEST['mobileno']);
-  $pay_id = mysqli_real_escape_string($conn, $_REQUEST['pay_id']);
-  $trainer_id = mysqli_real_escape_string($conn, $_REQUEST['trainer_id']);
+  $ci = mysqli_real_escape_string($conn, $_REQUEST['txtci']);
+  $nomb = mysqli_real_escape_string($conn, $_REQUEST['txtnomb']);
+  $app = mysqli_real_escape_string($conn, $_REQUEST['txtapp']);
+  $apm = mysqli_real_escape_string($conn, $_REQUEST['txtapm']);
+  $telef = mysqli_real_escape_string($conn, $_REQUEST['txttelef']);
+  $paq = mysqli_real_escape_string($conn, $_REQUEST['txtpaq']);
+  $entr = mysqli_real_escape_string($conn, $_REQUEST['txtentr']);
+
   
   
-  $user_check_query = "SELECT * FROM member WHERE mem_id='$mem_id' LIMIT 1";
+  $user_check_query = "SELECT * FROM miembro WHERE CI='$ci' LIMIT 1";
   $result = mysqli_query($conn, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { 
-    if ($user['mem_id'] === $mem_id) {
-      array_push($errors, "<div class='alert alert-warning'><b>ID already exists</b></div>");
+    if ($user['CI'] === $ci) {
+      array_push($errors, "<div class='alert alert-warning'><b>CI ya existe</b></div>");
     }
   }
 
@@ -29,13 +29,13 @@ if (isset($_REQUEST['member'])) {
   if (count($errors) == 0) {
   
 
-    $query = "INSERT INTO member (mem_id,name,age,dob,package,mobileno,pay_id,trainer_id) 
-          VALUES('$mem_id','$name','$age','$dob','$package','$mobileno','$pay_id','$trainer_id')";
+    $query = "INSERT INTO miembro (CI,NOMBRE,APP,APM,,TELEFONO,PAQUETE,ENTRENADOR) 
+          VALUES('$ci','$nomb','$app','$apm','$telef','$paq','$entr')";
     $sql=mysqli_query($conn, $query);
     if ($sql) {
-    $msg="<div class='alert alert-success'><b>Member added successfully</b></div>";
+    $msg="<div class='alert alert-success'><b>Agregado correctamente</b></div>";
     }else{
-      $msg="<div class='alert alert-warning'><b>Member not added</b></div>";
+      $msg="<div class='alert alert-warning'><b>Error</b></div>";
     }
   }
 }
@@ -49,7 +49,6 @@ if (isset($_REQUEST['member'])) {
 
 
 
-<div class="container">
   <div class="container_add">
 	<form class="form-group mt-3" method="post" action="">
 		<div><h3>NUEVO MIEMBRO</h3></div>
@@ -58,20 +57,19 @@ if (isset($_REQUEST['member'])) {
 
     ?>
 		<label class="mt-3">CI</label>
-		<input type="text" name="id" class="form-control">
+		<input type="text" name="txtci" class="form-control">
 		<label class="mt-3">NOMBRE</label>
-		<input type="text" name="name" class="form-control">
+		<input type="text" name="txtnomb" class="form-control">
 		<label class="mt-3">APELLIDO PATERNO</label>
-		<input type="text" name="age" class="form-control">
+		<input type="text" name="txtapp" class="form-control">
 		<label class="mt-3">APELLIDO MATERNO</label>
-		<input type="text" name="dob" class="form-control">
+		<input type="text" name="txtapm" class="form-control">
 		<label class="mt-3">TELEFONO</label>
-		<input type="text" name="mobileno" class="form-control">
+		<input type="text" name="txttelef" class="form-control">
 		<label class="mt-3">PAQUETE</label>
-		<input type="text" name="pay_id" class="form-control">
+		<input type="text" name="txtpaq" class="form-control">
 		<label class="mt-3">ENTRENADOR</label>
-		<input type="text" name="trainer_id" class="form-control">
-		<button class="btn btn-dark mt-3" type="submit" name="member">AGREGAR</button>
-</div>
+		<input type="text" name="txtentr" class="form-control">
+		<button class="btn btn-dark mt-3" type="submit" name="btnaddmiembro">AGREGAR</button>
 	</form>
 </div>

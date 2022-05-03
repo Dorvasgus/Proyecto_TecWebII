@@ -35,8 +35,7 @@ include("auth.php");
 <div class="row mt-3">
   <div class="col-2">
     <div id="accordion">
-    <div class="list-group">       
-      </div>
+         
          <div class="list-group-item bg-dark">
         <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapsefive">
         <i class="fas fa-book"></i>MIEMBROS</a>
