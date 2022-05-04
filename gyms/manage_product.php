@@ -3,7 +3,7 @@
 
 <div class="container">
 	<form class="form-group mt-3" method="post" action="home.php?info=payment_search">
-		<h3 class="lead">SEARCH PAYMENT AREA</h3>
+		<h3 class="lead">Buscar producto</h3>
 		<input type="text" name="id" class="form-control" placeholder="ENTER PAYMENT AREA ID">
 	</form>
 

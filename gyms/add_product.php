@@ -46,7 +46,7 @@ if (isset($_REQUEST['registro'])) {
 
 <div class="container">
 	<form class="mt-3 form-group" method="post" action="">
-		<h3>ADD PAYMENT AREA</h3>
+		<h3>Agregar Producto</h3>
 		 <?php include('errors.php'); 
     echo @$msg;
 
@@ -60,7 +60,7 @@ if (isset($_REQUEST['registro'])) {
 		<label class="mt-3">Stock</label>
 		<input type="text" name="stock" class="form-control">
     <label class="mt-3">Fecha Vencimiento</label>
-		<input type="datetime" name="fechV" class="form-control">
+		<input type="date" name="fechV" class="form-control">
 		<button class="btn btn-dark mt-3" type="submit" name="registro">Agregar</button>
 	</form>
 </div>

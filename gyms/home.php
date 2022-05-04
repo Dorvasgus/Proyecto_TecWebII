@@ -42,11 +42,11 @@ include("auth.php");
         <div id="accordion">
           <div class="list-group-item bg-dark">
             <a class="collapsed nav-link text-light" data-toggle="collapse" href="#collapsefive">
-              <i class="fas fa-book"></i> Miembros</a>
+              <i class="fas fa-book"></i> Clientes</a>
           </div>
           <div id="collapsefive" class="collapse" data-parent="#accordion">
-            <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_member" class="text-light">AGREGAR MIEMBROS</a></div>
-            <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_member" class="text-light">VER MIEMBROS</a></div>
+            <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=add_member" class="text-light">Agregar Clientes</a></div>
+            <div class="list-group-item" style="background-color: #303030;"><a href="home.php?info=manage_member" class="text-light">Ver Clientes</a></div>
           </div>
 
           <div class="list-group-item bg-dark">
