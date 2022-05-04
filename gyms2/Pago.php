@@ -4,11 +4,15 @@
 		<input type="text" name="id" class="form-control" placeholder="INGRESE ID DE PAGO">
 	</form>
 	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
+	<table class="table">
+  <thead class="table-dark">
+  <tr>
 				<th>PAGO_ID</th>
 				<th>MONTO</th>
 			</tr>
+  </thead>
+  <tbody class="table_data">
+			
 			<?php
            require('db.php');
 $all="SELECT * FROM pago";
@@ -23,7 +27,9 @@ if (mysqli_num_rows($all_query) > 0) {
 } else {
     echo "0 results";
 }
-?>			
+?>		  
+	  </tbody>
+
 		</table>
 	</div>
 </div>

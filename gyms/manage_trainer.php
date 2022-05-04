@@ -9,6 +9,8 @@
 		<table class="table">
 			<thead class="table-dark">
 				<tr>
+					<th>SELECCIONAR</th>
+                    <th>ELIMINAR</th>
 					<th>CI</th>
 					<th>NOMBRE</th>
 					<th>APELLIDO PATERNO</th>
@@ -27,6 +29,8 @@
 					if (mysqli_num_rows($all_query) > 0) {
 						while($row = mysqli_fetch_assoc($all_query)) {
 							echo "<tr>";
+							echo "<td><a href=home.php?info=manage_trainer U=$row[CI]>SELECCIONAR</a></td>";
+            				echo "<td><a href=home.php?D=$row[CI]>ELIMINAR</a></td>";
 							echo "<td>".$row['CI']."</td>";
 							echo "<td>".$row['NOMBRE']."</td>";
 							echo "<td>".$row['APP']."</td>";

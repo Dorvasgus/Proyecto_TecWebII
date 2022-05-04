@@ -4,8 +4,9 @@
 		<input type="text" name="nombre" class="form-control" placeholder="INGRESAR NOMBRE">
 	</form>
 	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
+	<table class="table">
+  <thead class="table-dark">
+  <tr>
 				<th>CLIENTE_ID</th>
 				<th>NOMBRE</th>
 				<th>INICIO</th>
@@ -13,6 +14,11 @@
 				<th>PAQUETE</th>
 				<th>CELULAR</th>
 			</tr>
+  </thead>
+  <tbody class="table_data">
+
+
+			
 			<?php
            require('db.php');
 $all="SELECT * FROM cliente";
@@ -32,6 +38,8 @@ if (mysqli_num_rows($all_query) > 0) {
     echo "0 resultados";
 }
 ?>			
+  </tbody>
+
 		</table>
 	</div>
 </div>

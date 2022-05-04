@@ -4,13 +4,20 @@
 		<input type="text" name="nombre" class="form-control" placeholder="INGRESE EL NOMBRE O EL ID  DE LA DISCIPLINA">
 	</form>
 	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
+	<table class="table">
+  <thead class="table-dark">
+  <tr>
 				<th>DISCIPLINA_ID</th>
 				<th>NOMBRE DISCIPLINA</th>
 				<th>TIEMPO</th>
 				<th>TIPO</th>
 			</tr>
+  </thead>
+  <tbody class="table_data">
+    
+  
+
+			
 			<?php
            require('db.php');
 $all="SELECT * FROM disciplina";
@@ -27,7 +34,8 @@ if (mysqli_num_rows($all_query) > 0) {
 } else {
     echo "0 results";
 }
-?>			
+?>	
+</tbody>		
 		</table>
 	</div>
 </div>

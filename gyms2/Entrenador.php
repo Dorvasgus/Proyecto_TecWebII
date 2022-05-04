@@ -4,14 +4,16 @@
 		<input type="text" name="nombre" class="form-control" placeholder="INGRESE NOMBRE O ID DE ENTRENADOR">
 	</form>
 	<div class="container">
-		<table class="table table-bordered table-hover">
-			<tr>
-				<th>ENTRENADOR_ID</th>
+	<table class="table">
+  <thead class="table-dark">
+  				<th>ENTRENADOR_ID</th>
 				<th>NOMBRE</th>
 				<th>TIEMPO</th>
 				<th>CELULAR</th>
-			</tr>
-			<?php
+  </thead>
+  <tbody class="table_data">
+	
+<?php
            require('db.php');
 $all="SELECT * FROM entrenador";
 $all_query=mysqli_query($conn,$all);
@@ -28,6 +30,8 @@ if (mysqli_num_rows($all_query) > 0) {
     echo "0 resultados";
 }
 ?>			
+  </tbody>
+
 		</table>
 	</div>
 </div>
