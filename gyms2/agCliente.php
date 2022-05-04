@@ -30,7 +30,7 @@ if (isset($_REQUEST['cliente'])){
   }
 }
 ?>
-<div class="container">
+<div class="container_add">
 	<form class="form-group mt-3" method="post" action="">
 		<div><h3>AGREGAR CLIENTE</h3></div>
 		 <?php include('errors.php'); 
@@ -49,9 +49,31 @@ if (isset($_REQUEST['cliente'])){
 		<label class="mt-3">CELULAR</label>
 		<input type="text" name="celular" class="form-control">
 		<label class="mt-3">PAGO</label>
-		<input type="text" name="pago_id" class="form-control">
+		<select name="pago_id" id="">
+      <option selected>Seleccionar</option>
+      <?php
+          require('db.php');
+          $all="SELECT * FROM pago";
+          $all_query=mysqli_query($conn,$all);
+              while($row = mysqli_fetch_assoc($all_query)) {
+                 echo "<tr>";
+              echo "<option value=$row[pago_id]>$row[monto]</td>";
+              }
+      ?>
+    </select>
 		<label class="mt-3">ENTRENADOR ID</label>
-		<input type="text" name="entrenador_id" class="form-control">
+    <select name="entrenador_id" id="">
+      <option selected>Seleccionar</option>
+      <?php
+          require('db.php');
+          $all="SELECT * FROM entrenador";
+          $all_query=mysqli_query($conn,$all);
+              while($row = mysqli_fetch_assoc($all_query)) {
+                 echo "<tr>";
+              echo "<option value=$row[entrenador_id]>$row[nombre]</td>";
+              }
+      ?>
+    </select>
 		<button class="btn btn-dark mt-3" type="submit" name="cliente">AGREGAR</button>
 	</form>
 </div>

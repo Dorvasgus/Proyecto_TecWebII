@@ -1,3 +1,5 @@
+
+
 <?php
 require('db.php');
 $nombre="";
@@ -20,6 +22,7 @@ if (isset($_POST['nombre'])) {
 		if(mysqli_num_rows($que) > 0){	
 	while($row=mysqli_fetch_array($que))
 	{
+		
 		echo "<tr>";
 		echo "<td>".$row['cliente_id']."</td>";
 		echo "<td>".$row['nombre']."</td>";
@@ -35,3 +38,4 @@ if (isset($_POST['nombre'])) {
 }	
 }	
 ?>
+

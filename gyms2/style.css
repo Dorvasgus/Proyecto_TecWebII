@@ -8,3 +8,14 @@ h3{
 background-color: white;
 color: black;
 }
+.container_add{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 20%;
+	right: 50%;
+}
+.buscar_cliente{
+	background-color: white;
+	color: black;
+}

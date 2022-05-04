@@ -25,7 +25,7 @@ if (isset($_REQUEST['pago'])) {
   }
 }
 ?>
-<div class="container">
+<div class="container_add">
 	<form class="mt-3 form-group" method="post" action="">
 		<h3>PAGOS</h3>
 		 <?php include('errors.php'); 

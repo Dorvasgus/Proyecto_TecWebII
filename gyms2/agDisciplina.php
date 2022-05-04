@@ -26,7 +26,7 @@ if (isset($_REQUEST['disciplina'])) {
   }
 }
 ?>
-<div class="container">
+<div class="container_add">
 	<form class="form-group mt-3" method="post" action="">
 		<div><h3>AGREGAR DISCIPLINA</h3></div>
 		 <?php include('errors.php'); 
