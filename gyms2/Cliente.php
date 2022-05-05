@@ -7,6 +7,8 @@
 	<table class="table">
   <thead class="table-dark">
   <tr>
+  				<th>SELECCIONAR</th>
+				<th>ELIMINAR</th>
 				<th>CLIENTE_ID</th>
 				<th>NOMBRE</th>
 				<th>INICIO</th>
@@ -26,7 +28,9 @@ $all_query=mysqli_query($conn,$all);
 if (mysqli_num_rows($all_query) > 0) {
     while($row = mysqli_fetch_assoc($all_query)) {
        echo "<tr>";
-			echo "<td>".$row['cliente_id']."</td>";
+	   	echo "<td><a href='home.php?id=$row[cliente_id]&info=actCliente'><i class='fas fa-pencil-alt'></i></a></td>";
+		echo  "<td><a href='home.php?id=$row[cliente_id]&info=elimCliente'><i class='fas fa-trash-alt'></i></a></td>";
+		echo "<td>".$row['cliente_id']."</td>";
 		echo "<td>".$row['nombre']."</td>";
 		echo "<td>".$row['inicio']."</td>";
 		echo "<td>".$row['edad']."</td>";

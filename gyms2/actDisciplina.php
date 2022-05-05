@@ -13,7 +13,7 @@ $con=mysqli_query($conn,"select * from disciplina where disciplina_id='".$_GET['
 $res=mysqli_fetch_assoc($con);
 ?>
 <div class="container">
-	<form class="form-group mt-3" method="post" action="">
+	<form class="form-group mt-3" method="post" action="home.php?info=buscarDisciplina">
 		<div><h3>ACTUALIZAR DISCIPLINA</h3></div>
 		 <?php  
     echo @$err;

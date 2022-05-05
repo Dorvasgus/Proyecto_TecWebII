@@ -6,10 +6,12 @@
 	<div class="container">
 	<table class="table">
   <thead class="table-dark">
+  				<th>ACTUALIZAR</th>
+				<th>ELIMINAR</th>
   				<th>ENTRENADOR_ID</th>
 				<th>NOMBRE</th>
 				<th>TIEMPO</th>
-				<th>CELULAR</th>
+				<th>CELULAR</th>			
   </thead>
   <tbody class="table_data">
 	
@@ -20,10 +22,13 @@ $all_query=mysqli_query($conn,$all);
 if (mysqli_num_rows($all_query) > 0) {
     while($row = mysqli_fetch_assoc($all_query)) {
        echo "<tr>";
+	   	echo "<td><a href='home.php?id=$row[entrenador_id]&info=actEntrenador'><i class='fas fa-pencil-alt'></i></a></td>";
+		echo  "<td><a href='home.php?id=$row[entrenador_id]&info=elimEntrenador'><i class='fas fa-trash-alt'></i></a></td>";
 		echo "<td>".$row['entrenador_id']."</td>";
 		echo "<td>".$row['nombre']."</td>";
 		echo "<td>".$row['tiempo']."</td>";
 		echo "<td>".$row['celular']."</td>";
+		
 		echo "</tr><br>";
     }
 } else {

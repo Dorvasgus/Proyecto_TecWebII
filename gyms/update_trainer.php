@@ -40,12 +40,12 @@ $res=mysqli_fetch_assoc($con);
 
     ?>
 		<label class="mt-3">CI</label>
-		<input type="text" name="id" value="<?php echo @$res['trainer_id'];?>" class="form-control">
-		<label class="mt-3">TRAINER NAME</label>
-		<input type="text" name="name" value="<?php echo @$res['name'];?>" class="form-control">
-		<label class="mt-3">TIME</label>
-		<input type="text" name="time" value="<?php echo @$res['time'];?>" class="form-control">
-		<label class="mt-3">MOBILE NO</label>
+		<input type="text" name="id" value="<?php echo @$res['CI'];?>" class="form-control">
+		<label class="mt-3">NOMBRE</label>
+		<input type="text" name="name" value="<?php echo @$res['NOMBRE'];?>" class="form-control">
+		<label class="mt-3">APELLIDO PATERNO</label>
+		<input type="text" name="time" value="<?php echo @$res['APP'];?>" class="form-control">
+		<label class="mt-3"></label>
 		<input type="text" name="mobileno" value="<?php echo @$res['mobileno'];?>" class="form-control">
 		<button class="btn btn-dark mt-3" type="submit" name="trainer">UPDATE</button>
 	</form>

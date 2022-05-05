@@ -7,7 +7,7 @@ if (isset($_REQUEST['cliente'])) {
   $inicio = mysqli_real_escape_string($conn, $_REQUEST['inicio']);
   $paquete = mysqli_real_escape_string($conn, $_REQUEST['paquete']);
   $celular = mysqli_real_escape_string($conn, $_REQUEST['celular']);
-  $update_query="actualizar cliente set cliente_id='$cliente_id',nombre='$nombre',edad='$edad',inicio='$inicio',paquete='$paquete',celular='$celular' where cliente_id='".$_GET['id']."'";
+  $update_query="update cliente set cliente_id='$cliente_id',nombre='$nombre',edad='$edad',inicio='$inicio',paquete='$paquete',celular='$celular' where cliente_id='".$_GET['id']."'";
   $update_sql=mysqli_query($conn,$update_query);
   $err="<div class='alert alert-success'><b>Datos Actualizados de Clientes</b></div>";
 }
